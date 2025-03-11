@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="page-container">
     <h1>Welcome to the World of Flamenco Robot Guitarist</h1>
     <p>
       This is a robot guitarist and singer that can automatically accompany Flamenco Fie de Fiesta, Bulerias, and Tangos.
