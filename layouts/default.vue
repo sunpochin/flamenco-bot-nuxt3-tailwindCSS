@@ -4,7 +4,7 @@
       <slot />
     </main>
     <footer class="footer">
-      <p>© {{ new Date().getFullYear() }} Tomoroll. All rights reserved.</p>
+      <p>© {{ new Date().getFullYear() }} Flamenco-bot. All rights reserved.</p>
     </footer>
   </div>
 </template>
