@@ -27,11 +27,12 @@
         <p>Emily has a background in digital marketing and a degree in Business Administration from Stanford University. She has a proven track record of successfully launching and promoting tech products.</p>
       </div>
     </div>
+    <Sidebar />
   </div>
 </template>
 
 <script setup>
-// Team page logic
+import Sidebar from '../components/Sidebar.vue';
 </script>
 
 <style scoped>
@@ -65,5 +66,11 @@ h1 {
   background-color: #ccc;
   border-radius: 50%;
   margin: 0 auto 1rem;
+  transition: transform 0.3s, border 0.3s;
+}
+
+.photo-placeholder:hover {
+  transform: translateY(-10px);
+  border: 2px solid #007bff;
 }
 </style>

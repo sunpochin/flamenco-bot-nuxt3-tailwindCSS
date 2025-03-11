@@ -90,6 +90,13 @@ function signUp() {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  transition: transform 0.3s, border 0.3s;
+  border: 2px solid #007bff;
+}
+
+.hero-image:hover {
+  transform: translateY(-5px);
+  border: 2px solid #007bff;
 }
 
 .hero-text {
