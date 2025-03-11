@@ -2,7 +2,9 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="logo">
-        <NuxtLink to="/home">Your Logo</NuxtLink>
+        <NuxtLink to="/home">
+          <img :src="logoSrc" alt="Flamenco Guitar Robot Logo" class="logo-image" />
+        </NuxtLink>
       </div>
       <ul class="navbar-menu">
         <li><NuxtLink to="/home" :class="{ active: $route.path === '/home' }">Home</NuxtLink></li>
@@ -15,7 +17,7 @@
 </template>
 
 <script setup>
-// Navbar component logic
+import logoSrc from '@/assets/flamenco-robot.webp';
 </script>
 
 <style scoped>
@@ -31,10 +33,13 @@
 }
 
 .logo a {
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 100px;
+  width: auto;
 }
 
 .navbar-menu {
