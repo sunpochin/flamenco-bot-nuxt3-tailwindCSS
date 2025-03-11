@@ -28,7 +28,7 @@ const toggleSidebar = () => {
 .sidebar {
   position: fixed;
   top: 0;
-  right: -250px;
+  right: -150px; /* Adjusted to show 100px */
   width: 250px;
   height: 100%;
   background-color: #333;
@@ -43,6 +43,7 @@ const toggleSidebar = () => {
 
 .sidebar-content {
   padding: 1rem;
+  width: 150px; /* Adjusted to fit within the visible area */
 }
 
 h2 {
