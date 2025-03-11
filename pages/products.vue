@@ -1,47 +1,52 @@
 <template>
   <div class="home-container">
-    <h1 class="page-title">Welcome to Our Website</h1>
+    <h1 class="page-title">Get Your Flamenco Robot!</h1>
     <div class="hero-section">
-      <img src="https://picsum.photos/800/400" alt="Hero Image" class="hero-image">
+      <img :src="flamencoImage" alt="Hero Image" class="hero-image">
       <p class="hero-text">{{ welcomeMessage }}</p>
     </div>
     
     <div class="features-section">
-      <div v-for="(feature, index) in features" :key="index" class="feature-card">
-        <h3>{{ feature.title }}</h3>
-        <p>{{ feature.description }}</p>
-        <button @click="showFeatureDetails(index)" class="feature-button">Learn More</button>
+      <div v-for="(product, index) in products" :key="index" class="feature-card">
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.description }}</p>
+        <p class="price">{{ product.price }}</p>
+        <button @click="showProductDetails(index)" class="feature-button">Learn More</button>
       </div>
     </div>
     
-    <div class="cta-section">
+    <!-- <div class="cta-section">
       <h2>Ready to get started?</h2>
       <button @click="signUp" class="cta-button">Sign Up Now</button>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import flamencoImage from '@/assets/flamenco-humanoid.webp';
 
 const welcomeMessage = ref('Discover our amazing services and products');
 const isLoading = ref(true);
 
-const features = ref([
+const products = ref([
   {
-    title: 'Feature 1',
-    description: 'This is a description of our first amazing feature.',
-    details: 'Expanded details about feature 1'
+    title: 'Flamenco Singer Robot',
+    description: 'This robot can sing Flamenco songs with perfect pitch and rhythm.',
+    price: '$1,200',
+    details: 'Expanded details about Flamenco Singer Robot'
   },
   {
-    title: 'Feature 2',
-    description: 'This is a description of our second amazing feature.',
-    details: 'Expanded details about feature 2'
+    title: 'Flamenco Guitarist Robot',
+    description: 'This robot can play Flamenco guitar with incredible skill.',
+    price: '$1,500',
+    details: 'Expanded details about Flamenco Guitarist Robot'
   },
   {
-    title: 'Feature 3',
-    description: 'This is a description of our third amazing feature.',
-    details: 'Expanded details about feature 3'
+    title: 'Flamenco Singer + Guitarist All-in-One Robot',
+    description: 'This robot can both sing and play Flamenco guitar, providing a full performance.',
+    price: '$2,500',
+    details: 'Expanded details about Flamenco Singer + Guitarist All-in-One Robot'
   }
 ]);
 
@@ -53,8 +58,8 @@ onMounted(() => {
   }, 500);
 });
 
-function showFeatureDetails(index) {
-  alert(features.value[index].details);
+function showProductDetails(index) {
+  alert(products.value[index].details);
 }
 
 function signUp() {
@@ -119,6 +124,12 @@ function signUp() {
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.price {
+  font-size: 1.2rem;
+  color: #28a745;
+  margin-top: 10px;
 }
 
 .cta-section {
