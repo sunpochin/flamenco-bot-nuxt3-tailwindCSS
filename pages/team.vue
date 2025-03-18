@@ -1,30 +1,24 @@
 <template>
-  <div class="team">
-    <h1>Meet Our Team</h1>
-    <div class="team-members">
-      <div class="team-member">
-        <div class="photo-placeholder"></div>
-        <h2>John Doe</h2>
-        <p>CEO</p>
-        <p>John is a serial entrepreneur with a Harvard MBA. He has successfully founded and sold multiple tech startups and is passionate about bringing innovative solutions to the market.</p>
+  <div class="flex flex-row max-w-7xl mx-auto p-8">
+    <!-- <h1 class="text-gray-1100 border-b-2 border-blue-500 pb-2 mb-8">Meet Our Team</h1> -->
+    <div style="flex-wrap: no-wrap;" class="flex flex-row overflow-x-auto gap-6 pb-4">
+      <div class="text-center flex-shrink-0 w-1/4">
+        <div class="w-[150px] h-[150px] bg-gray-300 rounded-full mb-4 transition-transform duration-300 hover:translate-y-[-10px] hover:border-2 hover:border-blue-500"></div>
+        <p class="font-bold">John Doe</p>
       </div>
-      <div class="team-member">
-        <div class="photo-placeholder"></div>
-        <h2>Jane Smith</h2>
-        <p>CTO</p>
-        <p>Jane holds a Ph.D. in Robotics and AI from the Polytechnic University of Valencia. She has over 15 years of experience in developing advanced robotic systems and artificial intelligence algorithms.</p>
+      <div class="text-center flex-shrink-0 w-1/4">
+        <div class="w-[150px] h-[150px] bg-gray-300 rounded-full mb-4 transition-transform duration-300 hover:translate-y-[-10px] hover:border-2 hover:border-blue-500"></div>
+        <p class="font-bold">Jane Smith</p>
       </div>
-      <div class="team-member">
-        <div class="photo-placeholder"></div>
-        <h2>Michael Brown</h2>
-        <p>Senior Robot Developer</p>
-        <p>Michael is an expert in robotic engineering with a Master's degree from MIT. He specializes in designing and programming autonomous robots for various applications.</p>
+
+
+      <div class="text-center flex-shrink-0 w-1/4">
+        <div class="w-[150px] h-[150px] bg-gray-300 rounded-full mb-4 transition-transform duration-300 hover:translate-y-[-10px] hover:border-2 hover:border-blue-500"></div>
+        <div class="font-bold">Michael Brown</div>
       </div>
-      <div class="team-member">
-        <div class="photo-placeholder"></div>
-        <h2>Emily Davis</h2>
-        <p>Marketing Manager</p>
-        <p>Emily has a background in digital marketing and a degree in Business Administration from Stanford University. She has a proven track record of successfully launching and promoting tech products.</p>
+      <div class="text-center flex-shrink-0 w-1/4">
+        <div class="w-[150px] h-[150px] bg-gray-300 rounded-full mb-4 transition-transform duration-300 hover:translate-y-[-10px] hover:border-2 hover:border-blue-500"></div>
+        <div class="font-bold">Emily Davis</div>
       </div>
     </div>
     <Sidebar />
@@ -35,42 +29,8 @@
 import Sidebar from '../components/Sidebar.vue';
 </script>
 
-<style scoped>
-.team {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-h1 {
-  color: #333;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.team-members {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.team-member {
-  flex: 1 1 calc(25% - 2rem);
-  text-align: center;
-}
-
-.photo-placeholder {
-  width: 150px;
-  height: 150px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 auto 1rem;
-  transition: transform 0.3s, border 0.3s;
-}
-
-.photo-placeholder:hover {
-  transform: translateY(-10px);
-  border: 2px solid #007bff;
-}
-</style>
+<scoped>
+  .no-wrap {
+    flex-wrap: no-wrap;
+  }
+</scoped>
