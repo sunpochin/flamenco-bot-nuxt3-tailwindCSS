@@ -14,6 +14,16 @@ export default defineNuxtConfig({
   // Alternatively, you can set up route rules if you need to customize routing
   routeRules: {
     '/': { redirect: '/home' }
-  }
+  },
+  css: ['~/assets/css/tailwind.css'],
+  postcss: {
+    plugins: {
+      '@tailwindcss/postcss': {},
+      autoprefixer: {},
+    },
+  },
+  modules: [
+    '@nuxtjs/tailwindcss'
+  ]
   // Note: The old router.extendRoutes approach is removed as it's not compatible with Nuxt 3
 })

@@ -1,6 +1,7 @@
 <template>
-  <div class="page-container">
-    <h1>Welcome to the World of Flamenco Robot Guitarist</h1>
+  <!-- <div class="page-container"> -->
+  <div class="mx-auto p-8 max-w-7xl">
+    <div class="page-title text-2xl font-bold text-blue-600">Welcome to the World of Flamenco Robot Guitarist</div>
     <p>
       This is a robot guitarist and singer that can automatically accompany Flamenco Fie de Fiesta, Bulerias, and Tangos.
       Our robot can not only play complex guitar pieces but also improvise based on your needs.
@@ -21,18 +22,13 @@
 </script>
 
 <style scoped>
-.page-container {
+/* .page-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-}
+} */
 
-.page-content {
-  margin-top: 2rem;
-}
-
-h1 {
-  color: #333;
+.page-title {
   border-bottom: 2px solid #007bff;
   padding-bottom: 0.5rem;
   margin-bottom: 2rem;
