@@ -4,7 +4,7 @@
       <slot />
     </main>
     <footer class="footer">
-      <p>© {{ new Date().getFullYear() }} Flamenco-bot. All rights reserved.</p>
+      <p>© {{ new Date().getFullYear() }} Made by sunpochin@gmail.com with ❤️ </p>
     </footer>
   </div>
 </template>
@@ -21,10 +21,12 @@
 }
 
 main {
-  flex: 1;
+  flex: 1 0 auto;
+  width: 100%;
 }
 
 .footer {
+  flex-shrink: 0;
   text-align: center;
   padding: 1.5rem;
   background-color: #f8f9fa;
