@@ -1,5 +1,6 @@
 <template>
   <div class="layout-default">
+    <NavBar />
     <main>
       <slot />
     </main>
@@ -10,6 +11,7 @@
 </template>
 
 <script setup>
+import NavBar from '~/components/NavBar.vue'
 // Default layout logic
 </script>
 
