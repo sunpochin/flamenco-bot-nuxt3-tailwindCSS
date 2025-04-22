@@ -36,7 +36,6 @@
 </template>
 
 <script setup>
-import Sidebar from '../components/SideBar.vue';
 </script>
 
 <style scoped>
